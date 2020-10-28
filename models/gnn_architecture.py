@@ -4,10 +4,6 @@
 import torch.nn as nn
 from torch_geometric.data import Data, Batch
 
-'''
-MPNN* GAT* *GIN* are not substantial for homogeneous flags
-Maybe because some implementation noises in pytorch-geometric
-'''
 class DeepGNN(nn.Module):
     def __init__(self, gnn_layer_module=None, layer_num=1, *args, **kwargs):
         assert(gnn_layer_module is not None)
